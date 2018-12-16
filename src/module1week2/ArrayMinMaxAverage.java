@@ -1,7 +1,9 @@
+package module1week2;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayReturnIndex {
+public class ArrayMinMaxAverage {
     public static void main(String[] args) {
 
         displayArrays();
@@ -24,19 +26,16 @@ public class ArrayReturnIndex {
         }
         return array;
     }
-    // method to find the index of an input number and display the array
+    // method to find the min, max, average and display the array
     private static void displayArrays () {
         int a[] = inputArrayOne();
+        int min = Arrays.stream(a).min().getAsInt();
+        int max = Arrays.stream(a).max().getAsInt();
+        double average = Arrays.stream(a).average().getAsDouble();
         System.out.print("The array you entered is: ");
         System.out.println(Arrays.toString(a));
-        Scanner userInput = new Scanner(System.in);
-        System.out.print("Enter a number from the array: ");
-        int targetNumber = userInput.nextInt();
-        for (int i=0; i<a.length; i++) {
-            if(a[i] == targetNumber) {
-                System.out.println("Number at index: " + i);
-            }
-        }
-
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
+        System.out.println("Average: " + average);
     }
 }

@@ -1,3 +1,5 @@
+package module1week2;
+
 import java.util.Scanner;
 public class SumAllNumbers {
 

@@ -1,10 +1,12 @@
+package module1week2;
+
 import java.util.Scanner;
 
 public class Fibonacci {
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Enter how many numbers you want to display from the Fibonacci sequence");
+        System.out.println("Enter how many numbers you want to display from the module1week2.Fibonacci sequence");
         int getUserInput = userInput.nextInt();
 
         // display and sum all numbers

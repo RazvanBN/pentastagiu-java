@@ -1,6 +1,10 @@
+package module1week2;
+
+import com.sun.deploy.util.StringUtils;
+
 import java.util.Scanner;
 
-public class StringContainsString {
+public class CharCount {
     public static void main(String[] args) {
 
         displayString();
@@ -13,12 +17,13 @@ public class StringContainsString {
         String inputText = userInput.nextLine();
         return inputText;
     }
-    // method to test if the given string contains another given string
+    // method to count how many times a character appears in the given string
     private static void displayString () {
         Scanner userInput = new Scanner(System.in);
         String a = inputString();
-        System.out.print("Insert string to test: ");
+        System.out.print("Insert character to count: ");
         String b = userInput.nextLine();
-        System.out.println(a.contains(b));
+        int count = a.length() - a.replace(b, "").length();
+        System.out.println("Appearances of letter " + b + " is: " + count);
     }
 }

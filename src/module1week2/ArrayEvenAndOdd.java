@@ -1,7 +1,9 @@
+package module1week2;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayMinMaxAverage {
+public class ArrayEvenAndOdd {
     public static void main(String[] args) {
 
         displayArrays();
@@ -24,16 +26,21 @@ public class ArrayMinMaxAverage {
         }
         return array;
     }
-    // method to find the min, max, average and display the array
+    // method to display the array & how many even and odd numbers exist in the array
     private static void displayArrays () {
         int a[] = inputArrayOne();
-        int min = Arrays.stream(a).min().getAsInt();
-        int max = Arrays.stream(a).max().getAsInt();
-        double average = Arrays.stream(a).average().getAsDouble();
+        int even = 0;
+        int odd = 0;
         System.out.print("The array you entered is: ");
         System.out.println(Arrays.toString(a));
-        System.out.println("Max: " + max);
-        System.out.println("Min: " + min);
-        System.out.println("Average: " + average);
+        for(int i=0; i<a.length; i++) {
+            if(a[i]%2!=0) {
+                odd++;
+            } else {
+                even++;
+            }
+        }
+        System.out.println("Odd elements count: " + odd);
+        System.out.println("Even elements count: " + even);
     }
 }
