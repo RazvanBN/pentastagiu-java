@@ -40,6 +40,7 @@ public class BoardAppMain {
                 app.showBoard();                                                // loop trough all messages
                 loopMenu += 1;                                                  // exit while
             }
+            System.out.println("Invalid selection, please make a selection from the listed menu");
         }
     }
 }
